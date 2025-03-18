@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Quiz Auto Marker",
+  "version": "1.0",
+  "description": "Mark and highlight answers in Microsoft Forms based on AI input",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://forms.microsoft.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
